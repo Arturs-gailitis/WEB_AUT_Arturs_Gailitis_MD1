@@ -14,6 +14,11 @@ describe('demoqa', () => {
             GridPage.clickNumbers.contains('Six').click();
             GridPage.clickNumbers.contains('Eight').click();
 
+            GridPage.verifyHighlighted.contains('Two');
+            GridPage.verifyHighlighted.contains('Four');
+            GridPage.verifyHighlighted.contains('Six');
+            GridPage.verifyHighlighted.contains('Eight');
+
         })
     })
 })

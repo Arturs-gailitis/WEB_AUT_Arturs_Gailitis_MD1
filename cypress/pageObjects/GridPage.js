@@ -12,4 +12,8 @@ export class GridPage extends BasePage {
     static get clickNumbers() {
         return cy.get('li.list-group-item');
     }
+
+    static get verifyHighlighted() {
+        return cy.get('li.list-group-item.active');
+    }
 }
