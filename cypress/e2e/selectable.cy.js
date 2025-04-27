@@ -18,10 +18,10 @@ describe('demoqa', () => {
             GridPage.clickNumbers.contains('Eight').click();
 
             //Validate that “Two”, “Four”, “Six”, “Eight” are highlighted
-            GridPage.verifyHighlighted.contains('Two');
-            GridPage.verifyHighlighted.contains('Four');
-            GridPage.verifyHighlighted.contains('Six');
-            GridPage.verifyHighlighted.contains('Eight');
+            GridPage.verifyHighlighted.contains('Two').should('have.class', 'active');
+            GridPage.verifyHighlighted.contains('Four').should('have.class', 'active');
+            GridPage.verifyHighlighted.contains('Six').should('have.class', 'active');
+            GridPage.verifyHighlighted.contains('Eight').should('have.class', 'active');
 
             //Validate that “One”, “Three”, “Five”, “Seven”, “Nine” are not highlighted
             GridPage.clickNumbers.contains('One').should('not.have.class', 'active');
